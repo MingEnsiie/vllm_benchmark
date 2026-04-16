@@ -13,6 +13,10 @@ WEIGHT_FILE_MARKERS = (
 )
 
 
+def default_models_dir() -> Path:
+    return Path(__file__).resolve().parent.parent / "Assets" / "models"
+
+
 def _looks_like_model_dir(model_dir: Path) -> bool:
     if not model_dir.is_dir():
         return False
@@ -24,7 +28,7 @@ def _looks_like_model_dir(model_dir: Path) -> bool:
 
 
 def discover_models(models_dir: Path | None = None) -> dict[str, Path]:
-    root = (models_dir or Path(__file__).resolve().parent / "models").resolve()
+    root = (models_dir or default_models_dir()).resolve()
     if not root.exists():
         return {}
 
@@ -41,7 +45,7 @@ def resolve_model(
 ) -> tuple[str, Path]:
     discovered = discover_models(models_dir)
     if not discovered:
-        raise ValueError("No local models found under the models directory")
+        raise ValueError("No local models found under the ../Assets/models directory")
 
     selected_name = model_name or (
         DEFAULT_MODEL_NAME if DEFAULT_MODEL_NAME in discovered else next(iter(discovered))
@@ -63,7 +67,7 @@ def _build_parser() -> argparse.ArgumentParser:
     subparsers.add_parser("list", help="List available local models")
 
     resolve_parser = subparsers.add_parser("resolve", help="Resolve a local model")
-    resolve_parser.add_argument("--model", help="Model directory name under models/")
+    resolve_parser.add_argument("--model", help="Model directory name under ../Assets/models/")
     resolve_parser.add_argument(
         "--field",
         choices=("name", "path", "served-name"),

@@ -18,9 +18,11 @@ vllm/
 │   ├── test_vllm_local.py # 测试模型发现/解析逻辑
 │   └── test_local_chat.py # 测试聊天客户端核心逻辑
 │
-├── models/                # 本地模型目录（不纳入版本控制）
-├── datasets/              # 多模态评测数据集（不纳入版本控制）
 └── docs/                  # 设计文档与规格说明
+
+../Assets/                 # 上级目录中的本地大体积资产（不纳入版本控制）
+├── models/                # 本地模型目录
+└── datasets/              # 多模态评测数据集
 ```
 
 ## 快速开始
@@ -86,7 +88,7 @@ python scripts/benchmark_speed.py --prompt-tokens 2048 --concurrency 4 8
 
 ## 本地模型
 
-模型存放于 `models/<模型名>/`，需包含 `config.json` 和权重文件（`.safetensors`）才会被识别。
+模型存放于 `../Assets/models/<模型名>/`，需包含 `config.json` 和权重文件（`.safetensors`）才会被识别。
 
 ```bash
 # 列出所有可用模型
@@ -116,7 +118,7 @@ python vllm_local.py resolve --model Qwen3.5-4B --field path
 
 ## 多模态评测数据集
 
-数据集存放于 `datasets/`，已下载：
+数据集存放于 `../Assets/datasets/`，已下载：
 
 | 数据集 | 类型 | 阶段 |
 |--------|------|------|
@@ -130,6 +132,10 @@ python vllm_local.py resolve --model Qwen3.5-4B --field path
 | DocVQA | 文档问答 | Phase 2 ✓ |
 
 Phase 3（幻觉/诊断）和 Phase 4（视频）待补充，详见 [multimodal_eval_todolist.md](multimodal_eval_todolist.md)。
+
+## 选型文档
+
+- [../Assets/models 与 ../Assets/datasets 实验选型参考手册](docs/2026-04-10-models-datasets-selection-handbook.md)
 
 ## 运行测试
 

@@ -198,7 +198,7 @@ async def main():
     parser.add_argument(
         "--list-models",
         action="store_true",
-        help="列出 models/ 下可用的本地模型并退出",
+        help="列出 ../Assets/models/ 下可用的本地模型并退出",
     )
     parser.add_argument(
         "--base-url",
@@ -243,7 +243,7 @@ async def main():
             print(model_name)
         return
 
-    selected_name, _ = resolve_model(args.model)
+    selected_name, selected_path = resolve_model(args.model)
     model_name = served_model_name(selected_name)
     base_url = args.base_url.rstrip("/")
 
@@ -255,7 +255,7 @@ async def main():
     prompt_list = None
     if args.prompt_tokens > 0:
         tokenizer = AutoTokenizer.from_pretrained(
-            f"models/{selected_name}",
+            str(selected_path),
             trust_remote_code=True,
         )
         long_prompt = build_prompt_for_target_tokens(tokenizer, args.prompt_tokens)

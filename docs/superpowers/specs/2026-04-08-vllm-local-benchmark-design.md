@@ -1,11 +1,11 @@
 # Local vLLM Benchmark Design
 
-**Goal:** Create a reproducible local vLLM workflow in this directory using `.vllm` with Python 3.12, defaulting to `models/Qwen3.5-0.8B`, while allowing any local model under `models/` to be selected for serving and benchmarking.
+**Goal:** Create a reproducible local vLLM workflow in this directory using `.vllm` with Python 3.12, defaulting to `../Assets/models/Qwen3.5-0.8B`, while allowing any local model under `../Assets/models/` to be selected for serving and benchmarking.
 
 ## Scope
 
 - Reuse or rebuild `.vllm` in the current directory with Python 3.12.
-- Standardize local model discovery from `models/`.
+- Standardize local model discovery from `../Assets/models/`.
 - Make the startup flow and benchmark flow accept a selectable model.
 - Benchmark `Qwen3.5-0.8B` at 2-way and 4-way concurrency by default.
 

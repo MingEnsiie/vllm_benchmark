@@ -1,8 +1,10 @@
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 from scripts.benchmark_speed import build_prompt_for_target_tokens, collect_stream_metrics
+import vllm_local
 from vllm_local import (
     DEFAULT_MODEL_NAME,
     discover_models,
@@ -11,6 +13,26 @@ from vllm_local import (
 
 
 class VllmLocalTests(unittest.TestCase):
+    def test_discover_models_defaults_to_parent_assets_models_directory(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            workspace_root = Path(tmp)
+            project_root = workspace_root / "vllm"
+            project_root.mkdir()
+            models_dir = workspace_root / "Assets" / "models"
+            model_dir = models_dir / DEFAULT_MODEL_NAME
+            model_dir.mkdir(parents=True)
+            (model_dir / "config.json").write_text("{}", encoding="utf-8")
+            (model_dir / "model.safetensors.index.json").write_text(
+                "{}",
+                encoding="utf-8",
+            )
+
+            fake_module_file = project_root / "vllm_local.py"
+            with patch.object(vllm_local, "__file__", str(fake_module_file)):
+                discovered = discover_models()
+
+            self.assertEqual(discovered, {DEFAULT_MODEL_NAME: model_dir.resolve()})
+
     def test_discover_models_only_returns_model_dirs_with_weights(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             models_dir = Path(tmp)
