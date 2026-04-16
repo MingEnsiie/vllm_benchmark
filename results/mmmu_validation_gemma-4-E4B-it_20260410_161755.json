@@ -1,0 +1,366 @@
+{
+  "summary": {
+    "model": "gemma-4-E4B-it",
+    "dataset": "mmmu",
+    "split": "validation",
+    "include_image": true,
+    "total_rows": 30,
+    "mc_samples": 30,
+    "valid_samples": 30,
+    "correct": 14,
+    "accuracy": 0.4666666666666667,
+    "errors": 0,
+    "subject_stats": {
+      "Accounting": {
+        "correct": 14,
+        "total": 30
+      }
+    },
+    "difficulty_stats": {
+      "Medium": {
+        "correct": 5,
+        "total": 16
+      },
+      "Easy": {
+        "correct": 7,
+        "total": 10
+      },
+      "Hard": {
+        "correct": 2,
+        "total": 4
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "validation_Accounting_1",
+      "subject": "Accounting",
+      "subfield": "Managerial Accounting",
+      "difficulty": "Medium",
+      "ground_truth": "B",
+      "predicted": "B",
+      "correct": true,
+      "error": null,
+      "response": "B"
+    },
+    {
+      "id": "validation_Accounting_2",
+      "subject": "Accounting",
+      "subfield": "Financial Accounting",
+      "difficulty": "Medium",
+      "ground_truth": "C",
+      "predicted": "B",
+      "correct": false,
+      "error": null,
+      "response": "B"
+    },
+    {
+      "id": "validation_Accounting_3",
+      "subject": "Accounting",
+      "subfield": "Financial Accounting",
+      "difficulty": "Medium",
+      "ground_truth": "B",
+      "predicted": "A",
+      "correct": false,
+      "error": null,
+      "response": "A"
+    },
+    {
+      "id": "validation_Accounting_4",
+      "subject": "Accounting",
+      "subfield": "Financial Accounting",
+      "difficulty": "Easy",
+      "ground_truth": "D",
+      "predicted": "A",
+      "correct": false,
+      "error": null,
+      "response": "A"
+    },
+    {
+      "id": "validation_Accounting_5",
+      "subject": "Accounting",
+      "subfield": "Managerial Accounting",
+      "difficulty": "Medium",
+      "ground_truth": "B",
+      "predicted": "D",
+      "correct": false,
+      "error": null,
+      "response": "D"
+    },
+    {
+      "id": "validation_Accounting_6",
+      "subject": "Accounting",
+      "subfield": "Managerial Accounting",
+      "difficulty": "Medium",
+      "ground_truth": "A",
+      "predicted": "D",
+      "correct": false,
+      "error": null,
+      "response": "D"
+    },
+    {
+      "id": "validation_Accounting_7",
+      "subject": "Accounting",
+      "subfield": "Investment",
+      "difficulty": "Hard",
+      "ground_truth": "B",
+      "predicted": "B",
+      "correct": true,
+      "error": null,
+      "response": "B"
+    },
+    {
+      "id": "validation_Accounting_8",
+      "subject": "Accounting",
+      "subfield": "Managerial Accounting",
+      "difficulty": "Easy",
+      "ground_truth": "A",
+      "predicted": "B",
+      "correct": false,
+      "error": null,
+      "response": "B"
+    },
+    {
+      "id": "validation_Accounting_9",
+      "subject": "Accounting",
+      "subfield": "Financial Accounting",
+      "difficulty": "Medium",
+      "ground_truth": "C",
+      "predicted": "D",
+      "correct": false,
+      "error": null,
+      "response": "D"
+    },
+    {
+      "id": "validation_Accounting_10",
+      "subject": "Accounting",
+      "subfield": "Investment",
+      "difficulty": "Medium",
+      "ground_truth": "A",
+      "predicted": "B",
+      "correct": false,
+      "error": null,
+      "response": "B"
+    },
+    {
+      "id": "validation_Accounting_11",
+      "subject": "Accounting",
+      "subfield": "Investment",
+      "difficulty": "Easy",
+      "ground_truth": "A",
+      "predicted": "A",
+      "correct": true,
+      "error": null,
+      "response": "A"
+    },
+    {
+      "id": "validation_Accounting_12",
+      "subject": "Accounting",
+      "subfield": "Managerial Accounting",
+      "difficulty": "Easy",
+      "ground_truth": "A",
+      "predicted": "A",
+      "correct": true,
+      "error": null,
+      "response": "A"
+    },
+    {
+      "id": "validation_Accounting_13",
+      "subject": "Accounting",
+      "subfield": "Managerial Accounting",
+      "difficulty": "Medium",
+      "ground_truth": "C",
+      "predicted": "B",
+      "correct": false,
+      "error": null,
+      "response": "B"
+    },
+    {
+      "id": "validation_Accounting_14",
+      "subject": "Accounting",
+      "subfield": "Managerial Accounting",
+      "difficulty": "Easy",
+      "ground_truth": "B",
+      "predicted": "B",
+      "correct": true,
+      "error": null,
+      "response": "B"
+    },
+    {
+      "id": "validation_Accounting_15",
+      "subject": "Accounting",
+      "subfield": "Managerial Accounting",
+      "difficulty": "Medium",
+      "ground_truth": "A",
+      "predicted": "A",
+      "correct": true,
+      "error": null,
+      "response": "A"
+    },
+    {
+      "id": "validation_Accounting_16",
+      "subject": "Accounting",
+      "subfield": "Investment",
+      "difficulty": "Easy",
+      "ground_truth": "C",
+      "predicted": "C",
+      "correct": true,
+      "error": null,
+      "response": "C"
+    },
+    {
+      "id": "validation_Accounting_17",
+      "subject": "Accounting",
+      "subfield": "Financial Accounting",
+      "difficulty": "Medium",
+      "ground_truth": "C",
+      "predicted": "D",
+      "correct": false,
+      "error": null,
+      "response": "D"
+    },
+    {
+      "id": "validation_Accounting_18",
+      "subject": "Accounting",
+      "subfield": "Managerial Accounting",
+      "difficulty": "Easy",
+      "ground_truth": "D",
+      "predicted": "B",
+      "correct": false,
+      "error": null,
+      "response": "B"
+    },
+    {
+      "id": "validation_Accounting_19",
+      "subject": "Accounting",
+      "subfield": "Managerial Accounting",
+      "difficulty": "Medium",
+      "ground_truth": "C",
+      "predicted": "B",
+      "correct": false,
+      "error": null,
+      "response": "B"
+    },
+    {
+      "id": "validation_Accounting_20",
+      "subject": "Accounting",
+      "subfield": "Investment",
+      "difficulty": "Medium",
+      "ground_truth": "B",
+      "predicted": "B",
+      "correct": true,
+      "error": null,
+      "response": "B"
+    },
+    {
+      "id": "validation_Accounting_21",
+      "subject": "Accounting",
+      "subfield": "Financial Accounting",
+      "difficulty": "Hard",
+      "ground_truth": "A",
+      "predicted": "A",
+      "correct": true,
+      "error": null,
+      "response": "A"
+    },
+    {
+      "id": "validation_Accounting_22",
+      "subject": "Accounting",
+      "subfield": "Financial Accounting",
+      "difficulty": "Easy",
+      "ground_truth": "B",
+      "predicted": "B",
+      "correct": true,
+      "error": null,
+      "response": "B"
+    },
+    {
+      "id": "validation_Accounting_23",
+      "subject": "Accounting",
+      "subfield": "Investment",
+      "difficulty": "Medium",
+      "ground_truth": "B",
+      "predicted": "A",
+      "correct": false,
+      "error": null,
+      "response": "A"
+    },
+    {
+      "id": "validation_Accounting_24",
+      "subject": "Accounting",
+      "subfield": "Investment",
+      "difficulty": "Hard",
+      "ground_truth": "A",
+      "predicted": "C",
+      "correct": false,
+      "error": null,
+      "response": "C"
+    },
+    {
+      "id": "validation_Accounting_25",
+      "subject": "Accounting",
+      "subfield": "Investment",
+      "difficulty": "Medium",
+      "ground_truth": "B",
+      "predicted": "B",
+      "correct": true,
+      "error": null,
+      "response": "B"
+    },
+    {
+      "id": "validation_Accounting_26",
+      "subject": "Accounting",
+      "subfield": "Managerial Accounting",
+      "difficulty": "Hard",
+      "ground_truth": "A",
+      "predicted": "C",
+      "correct": false,
+      "error": null,
+      "response": "C"
+    },
+    {
+      "id": "validation_Accounting_27",
+      "subject": "Accounting",
+      "subfield": "Financial Accounting",
+      "difficulty": "Medium",
+      "ground_truth": "C",
+      "predicted": "C",
+      "correct": true,
+      "error": null,
+      "response": "C"
+    },
+    {
+      "id": "validation_Accounting_28",
+      "subject": "Accounting",
+      "subfield": "Managerial Accounting",
+      "difficulty": "Medium",
+      "ground_truth": "A",
+      "predicted": "B",
+      "correct": false,
+      "error": null,
+      "response": "B"
+    },
+    {
+      "id": "validation_Accounting_29",
+      "subject": "Accounting",
+      "subfield": "Investment",
+      "difficulty": "Easy",
+      "ground_truth": "B",
+      "predicted": "B",
+      "correct": true,
+      "error": null,
+      "response": "B"
+    },
+    {
+      "id": "validation_Accounting_30",
+      "subject": "Accounting",
+      "subfield": "Financial Accounting",
+      "difficulty": "Easy",
+      "ground_truth": "A",
+      "predicted": "A",
+      "correct": true,
+      "error": null,
+      "response": "A"
+    }
+  ]
+}
